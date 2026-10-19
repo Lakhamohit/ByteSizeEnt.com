@@ -31,13 +31,12 @@ function renderFilms() {
     <article class="film-card" tabindex="0" role="button" aria-label="View ${escapeHtml(f.title)} details" data-id="${f.id}">
       <div class="poster"><img loading="lazy" src="${escapeHtml(f.image)}" alt="Cinematic still for ${escapeHtml(f.title)}"><span class="poster-badge">${escapeHtml(f.type)}</span><span class="poster-play">▶</span></div>
       <div class="film-meta-top"><span>${escapeHtml(f.genre.toUpperCase())}</span><span>${f.year}</span></div>
-      <h3 class="film-title">${escapeHtml(f.title)}</h3><p class="film-summary">${escapeHtml(f.summary)}</p>
+      <h3 class="---">${escapeHtml(f.title)}</h3><p class="film-summary">${escapeHtml(f.summary)}</p>
       <div class="film-details-line"><span>${escapeHtml(f.runtime)}</span><span>${escapeHtml(f.country)}</span><span>${escapeHtml(f.format)}</span></div>
     </article>`).join("");
   emptyState.hidden = list.length > 0;
   grid.hidden = list.length === 0;
   document.querySelectorAll(".chip").forEach(b => b.classList.toggle("selected", b.dataset.filter === activeType));
-  document.querySelectorAll("[data-filter]").forEach(b => { if (b.classList.contains("world-link")) return; });
 }
 function openFilm(id) {
   const f = films.find(item => item.id === Number(id));
