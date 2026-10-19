@@ -45,7 +45,8 @@
       </div>
     </section>
 
-    <section class="two-worlds wrap" aria-labelledby="worlds-title">
+    <!-- Two Worlds / Collections Section -->
+    <section class="two-worlds wrap" id="collections" aria-labelledby="worlds-title">
       <div class="section-heading">
         <div><div class="eyebrow">TWO PATHS. ONE COMMUNITY.</div><h2 id="worlds-title">Choose your way<br>into the story.</h2></div>
         <p>Different tools. Shared curiosity.<br>Every filmmaker has a place here.</p>
@@ -69,6 +70,7 @@
       <p class="neutral-note"><span>✳</span> No side to take. Just stories to discover.</p>
     </section>
 
+    <!-- Library / Explore Section -->
     <section class="library-section" id="explore">
       <div class="wrap">
         <div class="library-heading">
@@ -92,49 +94,43 @@
       </div>
     </section>
 
+    <!-- About Section -->
     <section class="quote-band" id="about">
       <div class="wrap quote-inner"><div class="quote-symbol">“</div><div><div class="eyebrow">OUR POINT OF VIEW</div><blockquote>We believe in the filmmaker.<br><em>Whatever the tools.</em></blockquote><p>ByteSizeEnt is built around a simple idea: filmmaking is a creative act, not a side to choose. We bring stories and the people behind them into one shared space.</p></div><div class="quote-stamp">BY FILMMAKERS<br><span>FOR FILMMAKERS</span><div class="stamp-star">✳</div></div></div>
     </section>
 
-    <section class="newsletter wrap" id="collections">
+    <section class="newsletter wrap">
       <div><div class="eyebrow">STAY IN THE FRAME</div><h2>Stories worth<br>hearing about.</h2><p>Get new releases, filmmaker spotlights, and fresh collections in your inbox.</p></div>
       <form id="newsletterForm" class="newsletter-form"><label for="emailInput">Your email address</label><div class="email-row"><input type="email" id="emailInput" placeholder="you@example.com" required><button class="button button-dark" type="submit">Join the list <span>↗</span></button></div><small id="newsletterMessage">No noise. Just good stories, occasionally.</small></form>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="wrap footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark">B<span>·</span></span><span>ByteSize<span class="brand-light">Ent</span><small>.com</small></span></a><p>One home for every kind of filmmaker.</p><div class="footer-links"><a href="#explore">Explore</a><a href="#about">About</a><a href="mailto:hello@bytesizeent.com">Contact</a></div></div><div class="wrap footer-bottom"><span>© 2026 ByteSizeEnt. Prototype concept.</span><span>Made for people who make stories. <b>✳</b></span></div></footer>
+  <footer class="site-footer">
+    <div class="wrap footer-top">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">B<span>·</span></span><span>ByteSize<span class="brand-light">Ent</span><small>.com</small></span></a>
+      <p>One home for every kind of filmmaker.</p>
+      <div class="footer-links"><a href="#explore">Explore</a><a href="#about">About</a><a href="mailto:hello@bytesizeent.com">Contact</a></div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>© 2026 ByteSizeEnt. Prototype concept.</span><span>Made for people who make stories. <b>✳</b></span>
+    </div>
+  </footer>
 
   <dialog id="filmDialog" class="film-dialog"><button class="dialog-close" id="closeDialog" aria-label="Close">×</button><div id="dialogContent"></div></dialog>
   <dialog id="signInDialog" class="signin-dialog"><button class="dialog-close" id="closeSignIn" aria-label="Close">×</button><div class="eyebrow">WELCOME BACK</div><h2>Good to see you.</h2><p>Member sign-in is a prototype placeholder. Authentication can be connected in the backend.</p><form id="signinForm"><label>Email<input type="email" required placeholder="you@example.com"></label><label>Password<input type="password" required placeholder="••••••••"></label><button class="button button-dark" type="submit">Continue <span>↗</span></button></form><small id="signinMessage"></small></dialog>
   <div class="search-overlay" id="searchOverlay" hidden><div class="search-overlay-inner"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search the library..."><button id="closeSearch" aria-label="Close search">×</button></div></div>
+
   <script src="app.js"></script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-<script>
+  <script>
     // Disable right-click context menu
     document.addEventListener('contextmenu', (e) => e.preventDefault());
 
     // Disable keyboard shortcuts for Inspect Element
     document.addEventListener('keydown', (e) => {
-        // F12
-        if (e.keyCode === 123) {
-            e.preventDefault();
-        }
-        // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
-        if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
-            e.preventDefault();
-        }
-        // Ctrl+U (View Source)
-        if (e.ctrlKey && e.keyCode === 85) {
-            e.preventDefault();
-        }
+        if (e.keyCode === 123) { e.preventDefault(); }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) { e.preventDefault(); }
+        if (e.ctrlKey && e.keyCode === 85) { e.preventDefault(); }
     });
-</script>
+  </script>
+</body>
+</html>
