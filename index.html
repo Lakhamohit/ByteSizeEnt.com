@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteSizeEnt.com - By Filmmakers, For Filmmakers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #222;
+            background: #111;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .hero-container {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            min-height: calc(100vh - 73px);
+        }
+
+        .side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filmaka-side {
+            background: linear-gradient(135deg, #141414 0%, #1f1a17 100%);
+            border-right: 1px solid #222;
+        }
+
+        .filmaka-side:hover {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a221e 100%);
+        }
+
+        .filmadika-side {
+            background: linear-gradient(135deg, #141414 0%, #161c24 100%);
+        }
+
+        .filmadika-side:hover {
+            background: linear-gradient(135deg, #1a1a1a 0%, #1e293b 100%);
+        }
+
+        .side h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .filmaka-side h1 {
+            color: #f59e0b; /* Warm Practical Tone */
+        }
+
+        .filmadika-side h1 {
+            color: #38bdf8; /* Sleek AI Tone */
+        }
+
+        .side p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 450px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .filmaka-btn {
+            background-color: #f59e0b;
+            color: #000;
+        }
+
+        .filmaka-btn:hover {
+            background-color: #d97706;
+            transform: translateY(-2px);
+        }
+
+        .filmadika-btn {
+            background-color: #38bdf8;
+            color: #000;
+        }
+
+        .filmadika-btn:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Responsive View */
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column;
+            }
+            .side {
+                padding: 40px 20px;
+                min-height: 50vh;
+            }
+            .filmaka-side {
+                border-right: none;
+                border-bottom: 1px solid #222;
+            }
+            .side h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ByteSizeEnt.com</div>
+        <div class="tagline">By Filmmakers, For Filmmakers</div>
+    </header>
+
+    <div class="hero-container">
+        <!-- FILMAKA Section (Practical Shoots) -->
+        <div class="side filmaka-side">
+            <h1>FILMAKA</h1>
+            <p>Explore our catalog of authentic, practical live-action shoots, traditional feature projects, and cinematic short films.</p>
+            <a href="#browse-practical" class="btn filmaka-btn">Explore Practical</a>
+        </div>
+
+        <!-- FILMAIKA Section (AI Projects) -->
+        <div class="side filmadika-side">
+            <h1>FILMAIKA</h1>
+            <p>Discover cutting-edge AI-generated cinematic series, experimental visual storytelling, and next-gen narrative formats.</p>
+            <a href="#browse-ai" class="btn filmadika-btn">Explore AI Projects</a>
+        </div>
+    </div>
+
+</body>
+</html>
